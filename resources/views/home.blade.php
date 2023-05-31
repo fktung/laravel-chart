@@ -1,21 +1,5 @@
 <x-layouts.main title="Test KBM">
-  <div class="mb-20">
-
-    <div class="container px-4 mx-auto">
-      <div class="p-6 mx-20 bg-white rounded shadow">
-        {!! $chart->container() !!}
-      </div>
-    </div>
-    <script src="{{ $chart->cdn() }}"></script>
-    {{ $chart->script() }}
-
-    <div class="container px-4 mx-auto">
-      <div class="p-6 m-20 bg-white rounded shadow max-w-xl">
-        {!! $chartAge->container() !!}
-      </div>
-    </div>
-    <script src="{{ $chartAge->cdn() }}"></script>
-    {{ $chartAge->script() }}
+  <div class="my-20">
 
     <div class="my-4 px-6">
       <a href="{{ url('add') }}" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">add</a>
@@ -75,6 +59,24 @@
         </tbody>
       </table>
     </div>
+
+    <div class="my-20">
+      <div class="container px-4 mx-auto">
+        <div class="p-6 mx-20 bg-white rounded shadow">
+          {!! $chart->container() !!}
+        </div>
+      </div>
+      <script src="{{ $chart->cdn() }}"></script>
+      {{ $chart->script() }}
+      <div class="container px-4 mx-auto">
+        <div class="p-6 m-20 bg-white rounded shadow max-w-xl">
+          {!! $chartAge->container() !!}
+        </div>
+      </div>
+      <script src="{{ $chartAge->cdn() }}"></script>
+      {{ $chartAge->script() }}
+    </div>
+
   </div>
 
 </x-layouts.main>
